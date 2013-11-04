@@ -12,6 +12,8 @@ Copyright (c) 2013 The Cellar Room Limited
 
 /* include twitteroauth.php */
 /* you can get my copy from github.com/kutf/twitter_auth/
+ */
+
 include_once('tcr_tweeter/twitteroauth.php');
 
 /* Register Actions this is what triggers the post */
@@ -31,8 +33,9 @@ function tcr_tweet_onpublish($postID)
 	        /* author needs a twitterid in their meta data*/
 	        $author = get_the_author_meta('twitterid',$author_id );
 	        
-	        /* get the permalink and shorten it */
+	        /* get the permalink */
 	        $url = get_permalink($postID);
+                /* and shorten it */
 	        $short_url = getBitlyUrl($url);
 	        
 	        //check to make sure the tweet is within the 140 char limit
@@ -48,8 +51,11 @@ function tcr_tweet_onpublish($postID)
 	        $message =  "New: ".$post_title." - ".$short_url." by @".$author." #hashtag";
 
 		 if ( $post->post_status != 'publish' ) return;
+                 if ( $post->post_status != 'future' ) return;	
+                 
 	        //call the tweet function to tweet out the message
-	        goTweet($message);
+	       //  goTweet($message);
+                print ($message);
         }
 }
 
