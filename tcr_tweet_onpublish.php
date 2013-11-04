@@ -47,6 +47,7 @@ function tcr_tweet_onpublish($postID)
 	        //add in the shortened bit.ly link
 	        $message =  "New: ".$post_title." - ".$short_url." by @".$author." #hashtag";
 
+		 if ( $post->post_status != 'publish' ) return;
 	        //call the tweet function to tweet out the message
 	        goTweet($message);
         }
