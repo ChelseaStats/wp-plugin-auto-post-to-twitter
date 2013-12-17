@@ -1,4 +1,4 @@
-#### wp-plugin-tweet-onpublish
+#### wp-plugin-auto-post-to-twitter
 
 Lightweight plugin that simply tweets when a new article is published.
 
