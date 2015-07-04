@@ -3,18 +3,15 @@
 Plugin Name: TCR Tweeter
 Description: Automatically tweets new post titles and links to a Twitter account by @author.
 License: GPL
-Version: 1.0.1
-Plugin URI: http://thecellarroom.net
+Version: 1.0.2
+Plugin URI: http://thecellarroom.uk
 Author: The Cellar Room Limited
-Author URI: http://www.thecellarroom.net
+Author URI: http://www.thecellarroom.uk
 Copyright (c) 2013 The Cellar Room Limited
 */
 
-/* include twitteroauth.php */
-/* you can get my copy from github.com/kutf/twitter_auth/
- */
 
-include_once('tcr_tweeter/twitteroauth.php');
+include_once('twitteroauth.php');
 
 /* Register Actions this is what triggers the post */
 add_action('new_to_publish', 'tcr_tweeter', 10, 1);
