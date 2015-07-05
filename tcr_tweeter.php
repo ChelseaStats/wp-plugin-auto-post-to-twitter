@@ -7,7 +7,7 @@ Version: 1.0.2
 Plugin URI: http://thecellarroom.uk
 Author: The Cellar Room Limited
 Author URI: http://www.thecellarroom.uk
-Copyright (c) 2013 The Cellar Room Limited
+Copyright (c) 2015 The Cellar Room Limited
 */
 
 include_once('twitteroauth.php');
